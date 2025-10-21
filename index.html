@@ -1,152 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lagos Gold & Gems — Nigerian Jewelry Store</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Lagos Gold & Gems — handcrafted gold, beads and gemstone jewelry. Shop Lagos & Abuja collections. Pay with Naira." />
-</head>
-<body>
-  <header role="banner">
-    <div id="brand">
-      <h1><a href="/" aria-label="Lagos Gold & Gems home">Lagos Gold & Gems</a></h1>
-      <p>Handcrafted Nigerian jewelry — Lagos · Abuja · Online</p>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-    <nav role="navigation" aria-label="Primary navigation">
-      <ul>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <body>
+    <main class="calculator">
+      <h1 class="title">Calculator</h1>
 
-    <div id="quick-contact" aria-hidden="false">
-      <p>Call/WhatsApp: <a href="tel:+2349065625149">+234 90 656 25 149</a></p>
-      <p>Email: <a href="mailto:info@lagosgoldgems.ng">info@lagosgoldgems.ng</a></p>
-    </div>
-  </header>
-
-  <main>
-    <section id="hero" aria-labelledby="hero-heading">
-      <h2 id="hero-heading">Timeless Nigerian Gold & Beadwork</h2>
-      <p>Discover handcrafted gold, coral beads, and gemstone pieces made by experienced artisans in Lagos.</p>
-      <p>
-        <a href="#shop">Shop Now</a> ·
-        <a href="#collections">Explore Collections</a>
-      </p>
-      <figure>
-        <img src="images/hero.jpg" alt="Model wearing gold necklace and coral beads" />
-        <figcaption>Featured: Signature Lagos Necklace</figcaption>
-      </figure>
-    </section>
-
-    <section id="shop" aria-labelledby="shop-heading">
-      <h3 id="shop-heading">Best Sellers</h3>
-      <ul>
-        <li>
-          <article aria-labelledby="prod-1-title">
-            <img src="images/signet-ring.jpg" alt="14k gold signet ring" />
-            <h4 id="prod-1-title">14k Gold Signet Ring</h4>
-            <p>Traditional finish · Handmade in Lagos</p>
-            <p><strong>₦120,000</strong></p>
-            <button type="button" aria-label="Add Gold Signet Ring to cart">Add to cart</button>
-          </article>
-        </li>
-
-        <li>
-          <article aria-labelledby="prod-2-title">
-            <img src="images/coral-necklace.jpg" alt="Traditional coral bead necklace" />
-            <h4 id="prod-2-title">Coral Bead Necklace (Ileke)</h4>
-            <p>Red coral · Hand-strung</p>
-            <p><strong>₦85,000</strong></p>
-            <button type="button" aria-label="Add Coral Bead Necklace to cart">Add to cart</button>
-          </article>
-        </li>
-
-        <li>
-          <article aria-labelledby="prod-3-title">
-            <img src="images/gem-earrings.jpg" alt="Tourmaline gemstone earrings" />
-            <h4 id="prod-3-title">Tourmaline Drop Earrings</h4>
-            <p>Gold-plated · Gemstone drops</p>
-            <p><strong>₦46,500</strong></p>
-            <button type="button" aria-label="Add Tourmaline Drop Earrings to cart">Add to cart</button>
-          </article>
-        </li>
-      </ul>
-    </section>
-
-    <section id="collections" aria-labelledby="collections-heading">
-      <h3 id="collections-heading">Collections</h3>
-      <ul>
-        <li><strong>Wedding Gold</strong> — Bridal sets and wedding bands</li>
-        <li><strong>Traditional Beads</strong> — Royal coral and glass beads</li>
-        <li><strong>Everyday Wear</strong> — Lightweight, durable pieces</li>
-      </ul>
-    </section>
-
-    <section id="about" aria-labelledby="about-heading">
-      <h3 id="about-heading">About Lagos Gold & Gems</h3>
-      <p>Family-owned since 2005. We source responsibly and craft pieces using traditional Nigerian techniques combined with modern finishing. Workshop visits available by appointment.</p>
-    </section>
-
-    <section id="testimonials" aria-labelledby="testimonials-heading">
-      <h3 id="testimonials-heading">Customer Reviews</h3>
-      <blockquote>
-        <p>"Beautiful work, excellent finish — delivered to Abuja quickly."</p>
-        <footer>— Aisha U., Lagos</footer>
-      </blockquote>
-      <blockquote>
-        <p>"Great customer service and authentic coral beads."</p>
-        <footer>— Chidi N., Enugu</footer>
-      </blockquote>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-heading">
-      <h3 id="contact-heading">Contact & Stores</h3>
-
-      <div id="store-locations">
-        <h4>Lagos (Victoria Island)</h4>
-        <address>
-          12 Ikoyi Road, Victoria Island, Lagos<br />
-          Hours: Mon–Sat, 9:00–17:00<br />
-          Phone/WhatsApp: <a href="tel:+2349065625149">+234 90 656 25 149</a>
-        </address>
-
-        <h4>Abuja (Wuse)</h4>
-        <address>
-          Suite 5, Wuse Market Arcade, Abuja<br />
-          Hours: Mon–Sat, 10:00–16:00<br />
-          Phone: <a href="tel:+2348090001111">+234 809 000 1111</a>
-        </address>
+      <!-- Display -->
+      <div class="display">
+        <div id="previous" class="previous-operand"></div>
+        <div id="current" class="current-operand">0</div>
       </div>
 
-      <form action="#" method="post" aria-label="Contact form">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
+      <!-- Buttons -->
+      <div class="buttons">
+        <!-- Row 1 -->
+        <button data-action="clear" class="wide">C</button>
+        <button data-action="delete">⌫</button>
+        <button data-action="operator">÷</button>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+        <!-- Row 2 -->
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-action="operator">×</button>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <!-- Row 3 -->
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-action="operator">-</button>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+        <!-- Row 4 -->
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-action="operator">+</button>
 
-  <footer role="contentinfo">
-    <p>© 2025 Lagos Gold & Gems. Prices shown in Nigerian Naira (₦).</p>
-    <nav aria-label="Footer links">
-      <ul>
-        <li><a href="/shipping">Shipping & Delivery</a></li>
-        <li><a href="/returns">Returns & Refunds</a></li>
-        <li><a href="/privacy">Privacy Policy</a></li>
-      </ul>
-    </nav>
-  </footer>
-</body>
+        <!-- Row 5 -->
+        <button data-number>0</button>
+        <button data-number>.</button>
+        <button data-action="equals" class="wide">=</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
